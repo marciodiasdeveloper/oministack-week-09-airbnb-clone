@@ -1,4 +1,6 @@
 const express = require('express');
+const SessionController = require('./controllers/SessionController');
+
 const routes = express.Router();
 
 // GET, POST, PUT, DELETE
@@ -7,9 +9,6 @@ const routes = express.Router();
 // req.params = Acessar route params
 // req.body = acessar corpo da requisicao
 
-
-routes.get('/users', (req, res) => {
-    return res.json(req.body);
-});
+routes.get('/users', SessionController.store);
 
 module.exportes = routes;
