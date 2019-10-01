@@ -3,9 +3,9 @@ const Spot = require('../models/Spot');
 
 module.exports = {
 
-    async index(req, res) {
+    // async index(req, res) {
 
-    };
+    // };
 
     async store(req, res) {
         console.log(req.body);
