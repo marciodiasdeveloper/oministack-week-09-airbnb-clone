@@ -1,5 +1,6 @@
 const express = require('express');
 const SessionController = require('./controllers/SessionController');
+const SpotController = require('./controllers/SpotController');
 
 const routes = express.Router();
 
@@ -9,6 +10,7 @@ const routes = express.Router();
 // req.params = Acessar route params
 // req.body = acessar corpo da requisicao
 
-routes.get('/users', SessionController.store);
+routes.post('/sessions', SessionController.store);
+routes.post('/spots', SpotController.store);
 
 module.exportes = routes;
