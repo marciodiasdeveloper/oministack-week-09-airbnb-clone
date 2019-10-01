@@ -16,7 +16,7 @@ const upload = multer(uploadConfig);
 // req.body = acessar corpo da requisicao
 
 routes.get('/', (req,res) => {
-    return res.json('Hello World');
+    return res.json({message: "Hello World"});
 });
 
 routes.post('/sessions', SessionController.store);

@@ -12,5 +12,7 @@ mongoose.connect('mongodb+srv://oministack:oministack@oministack9-95zvb.mongodb.
 app.use(express.json);
 app.use(routes);
 
-app.listen(3333);
-console.log('Node server running on port 3000');
+app.listen(3333, function() {
+    console.log('servidor rodando');
+});
+console.log('Node server running on port 3333');
