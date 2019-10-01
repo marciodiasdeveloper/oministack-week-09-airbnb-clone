@@ -10,9 +10,6 @@ module.exports = {
     },
 
     async store(req, res) {
-        // console.log(req.body);
-        // console.log(req.file);
-
         const { filename } = req.file;
         const { company, techs, price } = req.body;
         const { user_id } = req.headers;
@@ -33,4 +30,5 @@ module.exports = {
 
         return res.json(spot);
     }
+    
 };
