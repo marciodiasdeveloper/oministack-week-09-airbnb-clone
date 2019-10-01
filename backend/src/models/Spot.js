@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const SpotSchema = new mongoose.Schema({
-    thumbmail: String,
+    thumbnail: String,
     company: String,
     price: Number,
     letchs: [String],

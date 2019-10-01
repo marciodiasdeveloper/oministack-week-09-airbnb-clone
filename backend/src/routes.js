@@ -1,8 +1,12 @@
 const express = require('express');
+const multer = require('multer');
+const uploadConfig = require('./config/upload');
+
 const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
 
 const routes = express.Router();
+const upload = multer(uploadConfig);
 
 // GET, POST, PUT, DELETE
 
@@ -11,6 +15,6 @@ const routes = express.Router();
 // req.body = acessar corpo da requisicao
 
 routes.post('/sessions', SessionController.store);
-routes.post('/spots', SpotController.store);
+routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
 module.exportes = routes;
