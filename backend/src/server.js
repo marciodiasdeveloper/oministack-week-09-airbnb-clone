@@ -9,10 +9,9 @@ mongoose.connect('mongodb+srv://oministack:oministack@oministack9-95zvb.mongodb.
     useUnifiedTopology: true
 });
 
-app.use(express.json);
+app.use(express.json());
 app.use(routes);
 
 app.listen(3333, function() {
-    console.log('servidor rodando');
+    console.log('Node server running on port http://localhost:3333/');
 });
-console.log('Node server running on port 3333');
