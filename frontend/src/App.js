@@ -1,12 +1,20 @@
 import React from 'react';
+import api from './services/api';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+import logo from './assets/logo.svg';
 
-      </header>
+import Routes from './routes';
+
+function App() {
+
+  return (
+    <div className="container">
+      <img src={logo} alt="AirCnC" />
+      <div className="content">
+        <Routes />
+      </div>
     </div>
   );
 }
