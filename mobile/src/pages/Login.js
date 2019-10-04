@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Platform, AsyncStorage, View, KeyboardAvoidingView, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
@@ -9,6 +9,14 @@ export default function Login({navigation}) {
 
     const [email, setEmail] = useState('');
     const [techs, setTechs] = useState('');
+
+    useEffect(() => {
+        AsyncStorage.getItem('user').then(() => {
+            if(user) {
+                navigation.navigate('List');
+            }
+        })
+    }, []);
 
     async function handleSubmit() {
 
@@ -22,7 +30,7 @@ export default function Login({navigation}) {
         await AsyncStorage.setItem('techs', techs);
 
         navigation.navigate('List');
-        
+
     }
 
     return (
