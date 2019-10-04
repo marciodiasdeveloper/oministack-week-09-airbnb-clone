@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { Platform, View, KeyboardAvoidingView, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
 
 export default function Login() {
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView enabled={Platform.OS === 'ios'} behavior="padding" style={styles.container}>
             <Image source={logo} />
             <View style={styles.form}>
                 <Text styles={styles.label}>SEU E-MAIL *</Text>
@@ -30,7 +30,7 @@ export default function Login() {
                 </TouchableOpacity>
             </View>
             
-        </View>
+        </KeyboardAvoidingView>
     );
 }
 
