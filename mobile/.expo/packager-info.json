@@ -1,10 +1,10 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 28587,
-  "webpackServerPort": 19003,
-  "expoServerNgrokUrl": "https://qw-duz.anonymous.mobile.exp.direct",
-  "packagerNgrokUrl": "https://packager.qw-duz.anonymous.mobile.exp.direct",
-  "ngrokPid": 28620
+  "devToolsPort": 19003,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "webpackServerPort": 19000,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
