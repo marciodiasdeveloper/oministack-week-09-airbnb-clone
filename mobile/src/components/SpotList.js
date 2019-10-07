@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     thumbnail: {
         width:200,
         height:120,
-        resizeMode: 'conver',
+        resizeMode: 'cover',
         borderRadius:2
     },
     company: {

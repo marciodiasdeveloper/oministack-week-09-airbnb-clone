@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Platform, AsyncStorage, View, KeyboardAvoidingView, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
-
 import api from '../services/api';
 
 export default function Login({navigation}) {
@@ -45,7 +44,7 @@ export default function Login({navigation}) {
                     keyboardType="email-address"
                     autoCapitalize="none"
                     autoCorrect={false}
-                    onChangeText={setEmail(text)}
+                    onChangeText={setEmail(email)}
                 />
                 <Text styles={styles.label}>TECNOLOGIAS *</Text>
                 <TextInput 
@@ -54,7 +53,7 @@ export default function Login({navigation}) {
                     placeholderTextColor="#999"
                     autoCapitalize="words"
                     autoCorrect={false}
-                    onChangeText={setTechs(text)}
+                    onChangeText={setTechs(techs)}
                 />
                 <TouchableOpacity onPress={handleSubmit} style={styles.button}>
                     <Text style={styles.buttonText}>Encontrar spots</Text>
